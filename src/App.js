@@ -1,23 +1,19 @@
-import logo from "./logo.svg";
-import "./App.css";
+import ChordDiagram from "./components/chord-diagram";
+
+import "./App.scss";
 
 function App() {
+    const notes = [
+        [2, 1, "1"],
+        [3, 2, "2"],
+        [5, 3, "3"],
+        [6, "x"],
+    ];
+
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+        <div className="app">
+            <h1>Vexchords & React Example</h1>
+            <ChordDiagram label="C Major" notes={notes} />
         </div>
     );
 }
